@@ -1,0 +1,50 @@
+Collection in java is a framework that provides an architecture to store and manipulate the group of objects.
+Java collections can achieve all the opertations that you perform on a data such as Searching, Sorting, Insertion, Manipulation and Deletion.
+Java collection means a single unit of objects. Java collection framework provides many interfaces(Set, List, Queue and Dequeue) and classes(ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet)
+
+Collection Framework: Collection Framework represents a unified architecture for storing and manipulating a group of objects. It has:
+1. Interfaces and its implementations, i.e., classes
+2. Algorithm
+
+collection classes are: ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet
+Interfaces are Set, List, Queue and DeQueue
+Interfaces-
+Collection
+List- Array List, Vector, LinkedList
+Set-Hash Set, Linked Hash Set, Tree Set
+Map- Hash Map, Hash Table, TreeMap, Linked Hash Map
+Sorted Set
+Sorted Map
+Queue- Priority Queue
+
+ArrayList: ArrayList class implements the List Interface. It uses a dynamic array to store the duplicate element of different data types.
+The ArrayList class maintains the insertion order and is non synchronized. The elements stored in ArrayList can be randomly accessed.
+
+LinkedList: LinkedList implements the collection interface. It uses the doubly linked list to store the elements.
+It can store the duplicate elements. It can maintains the insertion order and is not synchronized. In linked list manipulation is fast and no shifting is required.
+
+Vector: Vector uses dynamic array to store the elements. It uses Array List.However it is synchronized and contains many methods,
+which are not part of Collection framework.
+
+Stack: Stack is the subclass of vector. It implements the last-in-first-out data structure i.e stack contains all of the methods of vector and also provides its methods like
+boolean push(), boolean peak(), boolean push(object o), which defines its properties.
+
+Queue interface: Oueue interface maintains the First-in-First-out order.It can be defined as an ordered list that is used to hold the elements which are to be processed.
+There are variety of classes like PriorityQueue, Dequeue and ArrayDequeue which implements the queue interface.
+
+Priority Queue: Priority Queue doesnot allow null values to be stored in the queue.Priority Queue implements the Queue interface.
+It holds the objects or elements to be processed by their properties.
+
+Set- Set is an interface. Set is used to store the elements in unordered sequence. Doesn't allow to store the duplicate elements.
+It can store atmost one null value. It was implemented by HashSet, LinkedHashSet, TreeSet.
+
+HastSet(C) - HashSet is used to create a collection that uses hash table for storage. It stores unique elements and allow null values
+It is non synchronized. It doesn't maintain insertion order.
+
+LinkedHashSet- It is a class and it stores the unique elements and it allows null values. It is non synchronized.
+It maintains insertion order.
+
+HashMap- It is non synchronized and it allows null key and value. The implementation of hashMap is faster.
+HashTable- It is synchronized and it doesnot allow values. The implementation is faster.
+
+TreeSet- It uses tree for storage(Ascending order)

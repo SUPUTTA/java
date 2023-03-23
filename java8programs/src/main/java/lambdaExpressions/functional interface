@@ -1,0 +1,71 @@
+Functional Interface- Functional interface contains only one abstract method(can have additional default/static init)
+1. Only one abstract method is allowed(also called as single abstract method)
+2. Any number of default methods are allowed
+3. Any number of static methods are allowed
+4. Any number of private methods are allowed
+
+Since functional interface has only one unimplemented interface,
+we can write the lambda code/pass the implementation behaviour of it using lambda code.
+Since there only one unlimplemented method inside the interface.
+
+Before Java8, there are some similar interfacees like functional interface, they are:
+Runnable: It contains only one abstract method run()
+Comparable: It contains only one abstract method compareTo()
+
+Simpleoperational interface is a valid functional interface though it doesn't have any abstract method,
+because it extends another functional interface which has only one abstract method
+
+@FunctionalInterface
+A few interfaces with single methods:
+Runnable
+Callable
+Comparator and Comparable
+
+Functional interface as separate API(java.util.funtion)
+It holds various functional interfaces like
+1)Predicate - java.util.function.Predicate<T>
+2)BiPredicate - java.util.function.BiPredicate<T,U>
+3)Function- java.util.function.Function<T,R>
+4)BiFunction- java.util.function.BiFunction<T, U, R>
+5)Consumer- java.util.function.Consumer<T>
+6)BiConsumer- java.util.function.BiConsumer<T,U>
+7)Supplier- java.util.function.Supplier<T>
+8)UnaryOperator- java.util.function.UnaryOperator<T>
+9)BinaryOperator- java.util.function.BinaryOperator<T>
+Note:
+1) Predicate functional interface- predicate functional interface handles the scenario where it accepts a input paramter and returns a boolean result after processing the input
+ @param<T> the type of input to the function
+ boolean test(T, t) - Single abstract value
+ static<T> Predicate<T> isEqual(Object targetRef) - Default method that can be used while joining multiple predicate conditions.
+ This acts like a Logical AND condition
+ default Predicate<T> negate()- Default method that can be used while joining multiple predicate conditions.
+ This acts like Logical NOT condition
+ default Predicate<T> and(Predicate<?super T> other) - Default method that can be used while joining multiple predicate conditions.
+ This acts like Logical AND condition
+
+ 2) Function functional interface - It is similar to predicate, Instead of boolean it can return any datatype as outcome.
+ It represents a function that accepts one argument and produces a result.
+ @param<T> the type of the input to the function
+ @param<R> the type of result to the function
+ R apply<T t> - SAM available
+ static<T>Function<T, T>identity() - static method which will return the same input value as the output
+ defaultCompose(..)/andThen(..) - default method that can be used for chaining
+ The difference between andThen and Compose() is that the andThen first function will executed followed by the second function whereas in compose it vice versa
+
+3) Unary Operator - if we have some scenarios where both the input and output paramters data type is same,
+then instead of using Function<T,R> we can use UnaryOperator<T>
+@param<T> the type of the operand and the result of the operator
+it is a child of Function<T,R>, so all apply(), compose(), andThen() are available inside the unary operator
+unary operator takes one arguments and returns a result of the same type of its arguments.
+
+4)Consumer Functional Interface - It will always consumes/accept the given input for processing but not return anything to the invocation method
+@param<T>- the type of the input to the given function
+void accept(T,t)- SAM Method
+default andThen(..) - Default method that can be used for chaining
+No static methods are available in consumer interface.
+
+5) Supplier Functional Interface - Will always return a value without accept any input. It will generating a report (or) OTP where don't provide any input.
+@param<T> the type of results supplied by this supplier
+T get(); - SAM Method
+
+6) Primitive type functional interface - It will accept or returns only object type values like Integer, Double, Float, Long etc.

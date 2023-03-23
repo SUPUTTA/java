@@ -1,0 +1,23 @@
+Streams: In java8 introduced a new feature in the interface is Streams API java.util.Stream API,
+The classes which we used for processing sequence of objects that we usually stored inside the collection.
+java.io.streams which are meant for processing binary data to/from the files. java.io streams != java.util streams
+
+Collections like list, set will be used if we want to represent the group of similar objects as a single entity,
+where as streams will be used to process a group of objects present inside a collection.
+
+We can create streams for collections, arrays or iterators.
+When we work with streams, we setup a pipeline of operations in different stages as mentioned below.
+1. Creating a stream using stream(), parallelStream() or Streams.of()
+2. One or more intermediate operations for transforming the initial stream into others (or) filtering etc.
+3. Applying a terminal operation to produce a result.
+
+Map Method(Intermediate Operation): map is used in the scenarios where we need to apply a business logic based upon the given input to transform the data we receive.
+In simple words, map is used transform one object into other by applying a function.
+
+FlatMap Method(Intermediate Operation): FlatMap method is used in the scenarios where sometimes we ended up with the multiple streams post.
+Like usually after crossing the business logic, you are expecting a stream out of it.
+To flat the streams into a single stream, instead of getting a stream of streams or multiple streams,
+we can use flat method, it will convert all streams into a single stream.
+
+Filter Method(Intermediate Operation): It will help you to filter the given data inside a stream based upon the business logic that you provided the execution of filter method.
+You will get one more new streams with the filter values in the subject.

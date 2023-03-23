@@ -1,0 +1,41 @@
+OOPS:
+1.Object
+2.Class
+3.Inheritance
+4.Polymorphism
+5.Abstraction
+6.Encapsulation
+Object: An entity that has a state and behavior is known as an object.
+Ex: chair, pen, table etc.
+State: represents the data(value) of an object
+Behavior: represents the behaviour(functionality) of an object such as withdraw, deposit etc.
+Identity: An object identity is typically identified by an unique ID value.The value of ID cannot be visible to the external user.
+
+An object can be defined as an instance of a class. An object contains an address and takes up some space in the memory
+Objects can communicate without knowing the details of each other's code and data.The only necessary thing is the type of message accepted and the type of response returned by the objects.
+
+An object is a real-world entity.
+An object is a runtime entity.
+The object is an entity which has state and behavior.
+The object is an instance of a class.
+
+Class: Collection of objects is called class. It is a logical entity.
+"A class can also be defined as a blueprint from which you can create an individual object".
+
+Fields
+Methods
+Constructors
+Blocks
+Nested class and interface
+
+Inheritance: When an object acquires all the properties and behaviours of a parent object is known as inheritance. It provides a code reusability.
+It is used to achieve the runtime polymorphism
+
+Polymorphism: If one task can be performed in different ways is known as polymorphism.
+In java we can use method overloading and overriding.
+
+Abstraction: Hiding internal details and showing only functionality is known as abstraction.
+
+Encapsulation: Binding code and data into a single unit is known as Encapsulation.
+A java class is the example of encapsulation. Java bean is the fully encapsulated class because all the data members are private here.
+
